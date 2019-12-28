@@ -12,6 +12,7 @@ import { YearlyComponent } from "./yearly/yearly.component";
 import { OnetimeComponent } from "./onetime/onetime.component";
 import { OncompletionofComponent } from "./oncompletionof/oncompletionof.component";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { NgxMaterialTimepickerModule } from "ngx-material-timepicker";
 
 const routes: Routes = [{ path: "", component: TabsComponent }];
 
@@ -20,7 +21,8 @@ const routes: Routes = [{ path: "", component: TabsComponent }];
     CommonModule,
     SharedModule,
     RouterModule.forChild(routes),
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxMaterialTimepickerModule
   ],
   declarations: [
     TabsComponent,
