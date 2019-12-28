@@ -1,1 +1,87 @@
-<p>weekly works!</p>
+<div style="padding:40px">
+  <form>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="100">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+          <mat-button-toggle value="Mon">
+            <mat-checkbox>Mon</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Tue"
+            ><mat-checkbox>Tue</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Wed"
+            ><mat-checkbox>Wed</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Thu"
+            ><mat-checkbox>Thu</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Fri"
+            ><mat-checkbox>Fri</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Sat"
+            ><mat-checkbox>Sat</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Sun"
+            ><mat-checkbox>Sun</mat-checkbox></mat-button-toggle
+          >
+        </mat-button-toggle-group>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="100">
+        <p>
+          Every<span>
+            <mat-form-field>
+              <input matInput type="number" required />
+            </mat-form-field>
+          </span>
+          Week
+        </p>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="100">
+        <mat-form-field appearance="outline" fxFlex="100">
+          <mat-label>Starts From</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="Starts From" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="50">
+        <mat-form-field appearance="outline" fxFlex="50">
+          <mat-label>End By</mat-label>
+          <input matInput [matDatepicker]="picker1" placeholder="End By" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker1"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div fxFlex="50">
+        <mat-form-field appearance="outline" fxFlex="50">
+          <mat-label>Ends After</mat-label>
+          <input matInput placeholder="Occurances" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="100">
+        <mat-card>
+          <div fxFlex="50">
+            <p>You have selected a <strong>Weekly</strong> frequency</p>
+          </div>
+          <div fxFlex="50" fxLayoutAlign="end end">
+            <button mat-raised-button color="primary">Finish</button>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,1 +1,28 @@
-<p>onetime works!</p>
+<div style="padding:40px">
+  <form>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="100">
+        <mat-form-field appearance="outline" fxFlex="100">
+          <input matInput [matDatepicker]="picker" placeholder="Starts From" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="100">
+        <mat-card>
+          <div fxFlex="50">
+            <p>You have selected a <strong>One time</strong> frequency</p>
+          </div>
+          <div fxFlex="50" fxLayoutAlign="end end">
+            <button mat-raised-button color="primary">Finish</button>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </form>
+</div>

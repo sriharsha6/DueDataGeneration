@@ -1,1 +1,106 @@
-<p>monthly works!</p>
+<div style="padding:40px">
+  <form>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="100">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+          <mat-button-toggle value="Jan">
+            <mat-checkbox>Jan</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Feb"
+            ><mat-checkbox>Feb</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Mar"
+            ><mat-checkbox>Mar</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Apr"
+            ><mat-checkbox>Apr</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="May"
+            ><mat-checkbox>May</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Jun"
+            ><mat-checkbox>Jun</mat-checkbox></mat-button-toggle
+          >
+        </mat-button-toggle-group>
+      </div>
+      <div fxFlex="100">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+          <mat-button-toggle value="Jul">
+            <mat-checkbox>Jul</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Aug"
+            ><mat-checkbox>Aug</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Sep"
+            ><mat-checkbox>Sep</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Oct"
+            ><mat-checkbox>Oct</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Nov"
+            ><mat-checkbox>Nov</mat-checkbox></mat-button-toggle
+          >
+          <mat-button-toggle value="Dec"
+            ><mat-checkbox>Dec</mat-checkbox></mat-button-toggle
+          >
+        </mat-button-toggle-group>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="100">
+        <p>
+          Every<span>
+            <mat-form-field>
+              <input matInput type="number" required />
+            </mat-form-field>
+          </span>
+          Month
+        </p>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="100">
+        <mat-form-field appearance="outline" fxFlex="100">
+          <mat-label>Starts From</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="Starts From" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="50">
+        <mat-form-field appearance="outline" fxFlex="50">
+          <mat-label>End By</mat-label>
+          <input matInput [matDatepicker]="picker1" placeholder="End By" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker1"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div fxFlex="50">
+        <mat-form-field appearance="outline" fxFlex="50">
+          <mat-label>Ends After</mat-label>
+          <input matInput placeholder="Occurances" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <div fxFlex="100">
+        <mat-card>
+          <div fxFlex="50">
+            <p>You have selected a <strong>Monthly</strong> frequency</p>
+          </div>
+          <div fxFlex="50" fxLayoutAlign="end end">
+            <button mat-raised-button color="primary">Finish</button>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </form>
+</div>
